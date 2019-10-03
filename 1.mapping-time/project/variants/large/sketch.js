@@ -1,28 +1,52 @@
+// circle clock
+
+let upperLimit = 100;
+let lowerLimit = 0;
+
+
 function setup() {
-  // set the width & height of the sketch
-  createCanvas(400, 130)
-
-  // print the time to the console once at the beginning of the run. try opening up the
-  // web inspector and poking around to see the various values the clock function gives you
-  print('starting time:', clock())
-
-}
+	createCanvas(720, 720);
+  
+  }
 
 function draw() {
-  // check the clock for the current time and unpack some of its fields to generate a time-string
-  var now = clock()
+    var now = clock(); 
+    let readout = "Time: " + now.timestamp;
+    let month = map(now.month, 0, 1, lowerLimit, upperLimit);
+    let season = now.season; 
+    let moon = now.progress.moon; 
+    let v = p5.Vector.fromAngle(month, 225);
+  background(0);
 
-  // set the background to 'white' – you can also specify colors use integers, hex-color strings and more.
-  // note that setting the background also clears the canvas from our previous round of drawing
-  background('white')
-
-  // set up typography & drawing-color
-  textFont("Anonymous Pro") // ← check index.html to see how it was loaded from google-fonts
-  textSize(42) // make it big
-  fill(100, 50, 50)
-
-  // draw the time string to the canvas
-  text(now.text.date, 30, 50)
-  text(now.text.time, 30, 100)
+//moon fullness arc, not working correctly 
+  stroke(0);
+  fill("yellow");
+  ellipse(width/2, height/2, 100, 100);
+  if (now.weekday === 6 || now.weekday === 7) {
+    stroke(255)
+    arc(width/2, height/2, 100, 50, PI + QUARTER_PI, 3 * PI / 2, OPEN);
+  } else {
+    arc(width/2, height/2, 100, 80, PI, 3*PI, OPEN); 
+  }
+//For season lines dividing screen
+  stroke(0);
+  line(width/2, height, width/2, 0);
+  line(0, height/2, width, height/2); 
+  
+  if (now.season == 1) {
+    fill("green");
+  } else {
+    fill(0);
+  }
+  
+  
+//For month "ticker"
+  
+  ellipseMode(CENTER);
+  translate(width / 2, height / 2);
+  translate(p5.Vector.fromAngle(month, 225));
+  fill(255);
+  ellipse(0, 0, 40, 40);
+  
 
 }

@@ -1,28 +1,44 @@
 function setup() {
-  // set the width & height of the sketch
-  createCanvas(400, 130)
+	// set the width & height of the sketch
+	createCanvas(600, 600);
+	angleMode(DEGREES);
 
-  // print the time to the console once at the beginning of the run. try opening up the
-  // web inspector and poking around to see the various values the clock function gives you
-  print('starting time:', clock())
+  }
 
-}
+  function draw() {
+	var now = clock(); 
+	if (now.pm) {
+    background(0)
+  }
+  else {
+    background(255)
+  }
+	translate (300, 300);
+	rotate(90);
 
-function draw() {
-  // check the clock for the current time and unpack some of its fields to generate a time-string
-  var now = clock()
+	var secondArc = map(now.progress.sec, 0, 1, 0, 360);
+	var minuteArc= map(now.progress.min, 0, 1, 0, 360);
+	var hourArc= map(now.progress.hour, 0, 1, 0, 360);
+	var dayArc = map(now.progress.day, 0, 1, 0, 360);
+	var monthCircles = map(now.month, 1, 12, 1, 12); 
 
-  // set the background to 'white' – you can also specify colors use integers, hex-color strings and more.
-  // note that setting the background also clears the canvas from our previous round of drawing
-  background('white')
+//Seconds, minutes, hours, progress of current day, as arcs
 
-  // set up typography & drawing-color
-  textFont("Anonymous Pro") // ← check index.html to see how it was loaded from google-fonts
-  textSize(42) // make it big
-  fill(100, 50, 50)
+	noFill();
+	strokeWeight(12);
+	strokeCap(ROUND);
+	stroke(255, 204, 50);
+	arc(0, 0, 345, 345, 0, secondArc);
+	stroke(255, 150, 300);
+	arc(0, 0, 375, 375, 0, minuteArc);
+	stroke(150, 300, 150);
+	arc (0, 0, 405, 405, 0, hourArc);
+	stroke(200,75,85);
+	arc(0, 0, 435, 435, 0, dayArc);
 
-  // draw the time string to the canvas
-  text(now.text.date, 30, 50)
-  text(now.text.time, 30, 100)
+//current month, progress of current month, as rectangles
 
-}
+	ellipse(0, 3)
+
+
+  }

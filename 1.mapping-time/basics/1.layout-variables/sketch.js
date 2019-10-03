@@ -4,8 +4,8 @@
 function setup() {
   createCanvas(720, 400);
   background(0);
-  stroke(150);
-  strokeWeight(4);
+  stroke(200);
+  strokeWeight(8);
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

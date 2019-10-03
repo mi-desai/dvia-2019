@@ -1,6 +1,6 @@
 
 function setup() {
-  createCanvas(512, 256); // set the size of the canvas
+  createCanvas(720, 512); // set the size of the canvas
   frameRate(60) // redraw the screen 60 times per second
   background(0) // fill the canvas with black pixels
 
@@ -27,5 +27,5 @@ function draw() {
 
   // switch back to drawing in black and print our greeting on top
   fill(0)
-  text("Peekaboo!", width/2, height/2 + textSize()/3)
+  text("I FUCKED YOUR WIFE", width/2, height/2 + textSize()/4)
 }
