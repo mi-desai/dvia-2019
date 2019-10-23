@@ -1,51 +1,29 @@
-## Process
+## Process - A Thousand Suns - Week02
 
 Description of the contents of this folder, a prose description of your ideas for how to represent
 the nuclear testing time series, and links to external data sources you'll be incorporating into
 the project.
 
-External Data Sources: 
-<link></link>
-<link></link>
-<link></link>
+Nuclear War Films: <link>https://www.imdb.com/list/ls000679442/</link>
 
-### Sketch #1 - Cultural Timeline and Histogram
+### Sketch - Film Timeline and Nuclear Test Histogram
 
-This idea incorporated my love of film into the subject matter of nuclear weaponry. The Cold War and the prospect of nuclear war inspired a huge amount of dystopian and disaster films, as well as thrillers, science fiction, and action movies. Using IMBD's Top 20 films about nuclear war as well as few of my own additions, I envision the following for my first sketch: 
+External Data Source: I used a list from IMDB which allowed to be quickly scrape year and title of each film and TV episode. I then grabbed IMDB's movie poster so it could be placed into my visualization in code. 
 
-An x-axis going through the middle of the canvas, with a histogram on the bottom showing the frequency of testing grouped by bins of two years. 
+In comparison to last week's sketch, I shifted the axis so that the layout is horizontal. 
 
-Along the top of the x-axis, lines connecting to the appropriate year with a movie poster jpeg file showing each movie or TV series, as well as a caption with the name. Ironically, in my research I discovered that most of the "classics" of depictions of nuclear war in film were in the 1980's, when nuclear stockpiles were at their height, but nuclear testing had begun to decline. 
+I also decided to bin all the nuclear tests on the left histogram for every two years, which would allow for test occurrences to be more dense and more comparable to the number of films in a decade. I want to make this a stacked bar for all tests, so that the rough proportion of USA vs. USSR tests can be gauged, and also bring in color into the visualization. I may expand this to include all countries' tests. 
 
-Each decade will have its own "color block" in the x-axis which I wanted 
+I decided to bin all the films by decade - I am not sure if binning the two datasets by different amounts will distort the data a bit, but I needed some way that I could display the full poster for each movie in the appropriate row. Primarily, this is a spacing issue. 
 
-External Data Source: 
+Additionally, I want to incorporate color in the center axis rectangle which will show the years in a way that does brighter colors for higher densities of tests, which will allow another comparison of number of films to number of nuclear tests. 
 
+It seems like the next hurdles all relate to setting this up in code, which I haven't started on yet. 
 
 Sketch: 
 
-![alt text]()
+![alt text](https://github.com/mi-desai/dvia-2019/blob/master/2.mapping-quantities/process/WeekTwo/Update%20-%20Film%20Timeline%20and%20Test%20Histogram%20Sketch.jpg)
 
-The first, bottom-most layer, represents the number of hours that have passed in the current day. The plan is to define a line within the rectangle that moves along the point defined by the property now.progress.day. Additionally, the color of the amount past (whatever 1 - now.progress.day is), will be colored differently to draw the eye, using the hue retinal variable as well as shape to communicate time. 
+Zoom-in of Sketch: 
 
-The second layer in the middle will have a smaller area rectangle representing the number of minutes that have passed in the current hour. Again, the idea is to define a line within the rectangle that reflects the property now.progress.hour. The retinal variables are the same.  
-The last, top-most, layer will be a yet smaller rectangle representing the number of seconds that have passed in the current minute. Again, the idea is to define a line within the rectangle that reflects the property now.progress.minute. The retinal variables are the same.
-
-### Sketch #2 - Area & Line Chart
-
-In this sketch, there are three layers of arcs. 
-
-![alt text]()
-
-The first, bottom-most arc, represents the progress that has been made in seconds towards the next minute, defined as now.progress.minute in radians. The color fill area will again have to be defined as 1-now.progress.minute, in radians. 
-
-The second and third arcs will be defined in the same way, as progress towards the next hour in minutes, using now.progress.hour and now.progress.day. 
-
-The retinal variables used are shape and hue. 
-
-### Sketch #3 - Close Call Timeline
-
-![alt text]()
-
-The final sketch has expanding concentric circles, whose expanding diameters are defined in terms of each other. The lower limit of the outermost circle representing progress in seconds towards the next minute is the upper limit of the middle circle, representing progress in minutes towards the next hour. In turn, the lower limit of the middle circle is the upper limit of the hour circle representing progress towards the completion of a twenty four hour day.
-
+![alt sketch](https://github.com/mi-desai/dvia-2019/blob/master/2.mapping-quantities/process/WeekTwo/Zoomed%20in%20-%20Film%20Timeline%20and%20Test%20Histogram%20Center.jpg)
