@@ -1,15 +1,14 @@
-## Process
+## Process - A Thousand Suns
 
-Description of the contents of this folder, a prose description of your ideas for how to represent
-the nuclear testing time series, and links to external data sources you'll be incorporating into
-the project.
+<b>External Data Sources:</b> 
 
-External Data Sources: 
-<link></link>
-<link></link>
-<link></link>
+Nuclear War Films: <link>https://www.imdb.com/list/ls000679442/</link>
 
-### Sketch #1 - Cultural Timeline and Histogram
+Nuclear Stockpiles by Country: <link>https://journals.sagepub.com/doi/full/10.2968/066004008</link>
+
+List of nuclear close calls: <link>https://en.wikipedia.org/wiki/List_of_nuclear_close_calls</link>
+
+### #1 - Cultural Timeline and Histogram
 
 This idea incorporated my love of film into the subject matter of nuclear weaponry. The Cold War and the prospect of nuclear war inspired a huge amount of dystopian and disaster films, as well as thrillers, science fiction, and action movies. Using IMBD's Top 20 films about nuclear war as well as few of my own additions, I envision the following for my first sketch: 
 
@@ -17,35 +16,35 @@ An x-axis going through the middle of the canvas, with a histogram on the bottom
 
 Along the top of the x-axis, lines connecting to the appropriate year with a movie poster jpeg file showing each movie or TV series, as well as a caption with the name. Ironically, in my research I discovered that most of the "classics" of depictions of nuclear war in film were in the 1980's, when nuclear stockpiles were at their height, but nuclear testing had begun to decline. 
 
-Each decade will have its own "color block" in the x-axis which I wanted 
+Each decade will have its own "color block" in the x-axis to differentiate the decades. 
 
-External Data Source: 
+Nuclear War Films: <link>https://www.imdb.com/list/ls000679442/</link>
 
+# Sketch: 
 
-Sketch: 
+![alt text](https://github.com/mi-desai/dvia-2019/blob/master/2.mapping-quantities/process/athousandsuns%20-%20cultural%20timeline%20and%20histogram.jpg)
 
-![alt text]()
+### #2 - Area & Line Chart
 
-The first, bottom-most layer, represents the number of hours that have passed in the current day. The plan is to define a line within the rectangle that moves along the point defined by the property now.progress.day. Additionally, the color of the amount past (whatever 1 - now.progress.day is), will be colored differently to draw the eye, using the hue retinal variable as well as shape to communicate time. 
+In this sketch, I wanted to incorporate the total amount of the nuclear stockpiles of both the USSR and USA and represent them as a stacked area chart. On a secondary y-axis, I wanted to graph as lines the total number of nuclear tests by each superpower. The time scales would be by 5 years to achieve some dramatic changes. I was thinking about making each point on the lines being graphed as containing a jpeg of each superpower's respective flag. 
 
-The second layer in the middle will have a smaller area rectangle representing the number of minutes that have passed in the current hour. Again, the idea is to define a line within the rectangle that reflects the property now.progress.hour. The retinal variables are the same.  
-The last, top-most, layer will be a yet smaller rectangle representing the number of seconds that have passed in the current minute. Again, the idea is to define a line within the rectangle that reflects the property now.progress.minute. The retinal variables are the same.
+Nuclear Stockpiles by Country: <link>https://journals.sagepub.com/doi/full/10.2968/066004008</link>
 
-### Sketch #2 - Area & Line Chart
+# Sketch: 
 
-In this sketch, there are three layers of arcs. 
+![alt text](https://github.com/mi-desai/dvia-2019/blob/master/2.mapping-quantities/process/athousandsuns%20-area%2Bline%20chart.jpg)
 
-![alt text]()
+### #3 - Close Call Timeline
 
-The first, bottom-most arc, represents the progress that has been made in seconds towards the next minute, defined as now.progress.minute in radians. The color fill area will again have to be defined as 1-now.progress.minute, in radians. 
+This sketch incorporates primarily information about incidents that nearly brought the US and USSR into a full nuclear exchange. There were a number of these incidents, each with their own unique history and I wanted to represent them correctly. Interestingly enough, in total number of "close" calls, most of them were initiated by the United States, although the most serious, the Cuban Missile Crisis, was technically brought on by the USSR (though only after American missiles were placed in Turkey, which caused USSR to seek to place its missiles in Cuba). 
 
-The second and third arcs will be defined in the same way, as progress towards the next hour in minutes, using now.progress.hour and now.progress.day. 
+What I want to do here is to have a vertical "timeline" - if there are no incidents, show an arrow to a box saying there were none. If there was only 1, then detail it in the "middle" text column. If there were more than 1 per decade, expand to the third text column and break the line up to provide a little detail on each. 
 
-The retinal variables used are shape and hue. 
+I want to include a "heat map" with color showing the density of "close calls" and "number of tests" from the base data set using red, to represent largest number of incidents and/or tests. 
 
-### Sketch #3 - Close Call Timeline
+List of nuclear close calls: <link>https://en.wikipedia.org/wiki/List_of_nuclear_close_calls</link>
 
-![alt text]()
+# Sketch:
 
-The final sketch has expanding concentric circles, whose expanding diameters are defined in terms of each other. The lower limit of the outermost circle representing progress in seconds towards the next minute is the upper limit of the middle circle, representing progress in minutes towards the next hour. In turn, the lower limit of the middle circle is the upper limit of the hour circle representing progress towards the completion of a twenty four hour day.
+![alt text](https://github.com/mi-desai/dvia-2019/blob/master/2.mapping-quantities/process/athousandsuns%20-%20close%20call%20timeline.jpg)
 
