@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="libraries/leaflet/leaflet.css" />
+  <!-- default styles -->
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* default dimensions for the leaflet map */
+
+    #quake-map {
+      width: 100%;
+      height: 100%;
+    }
+
+    #canvas {
+      position: absolute;
+      bottom: 0;
+      z-index: 999;
+    }
+
+    .intro {
+      z-index: 9999;
+    }
+
+    .title {
+      position: absolute;
+      font-family: courier;
+      left: 2%;
+      font-size: 130%;
+      color: red;
+      width: 300px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .subtitle {
+      position: absolute;
+      font-family: courier;
+      left: 2%;
+      font-size: 70%;
+      top: 32px;
+      color: white;
+      width: 300px;
+      text-align: center;
+    }
+
+    .description {
+      position: absolute;
+      left: 2%;
+      top: 75px;
+      width: 350px;
+      color: white;
+      font-size: 70%;
+      font-family: courier;
+      text-align: left;
+    }
+    
+    select {
+      z-index: 9999;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="canvas">
+      <div class="intro">
+        <p class="title">
+          Proximity Alert
+        </p>
+        <p class="subtitle">
+          An Investigation of Earthquake Proximity to Unconventional Oil and Gas Plays in the Lower 48 (2008-2019)
+        </p>
+        <p class="description">The advent of hydraulic fracturing in drilling and completions has led to the United States becoming one of the top producers of oil and gas in the world in a short time. However, "fracking" is also freuqently associated with increased seismic activities around drilling areas. So is there a relationship?</p>
+        <!-- p5.js will create a canvas element here at runtime -->
+      </div>
+    </div>
+    <div id="quake-map"></div>
+  </div>
+  <!-- load our dependencies and sketch file -->
+  <script src="libraries/leaflet/leaflet.js"></script>
+  <script src="libraries/lodash.min.js"></script>
+  <script src="libraries/d3-geo.min.js"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.dom.min.js"></script>
+  <script src="sketch.js"></script>
+  <!-- p5.js will create a canvas element here at runtime -->
+
+</body>
+
+</html>

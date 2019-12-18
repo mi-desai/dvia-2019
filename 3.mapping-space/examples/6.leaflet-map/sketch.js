@@ -11,7 +11,7 @@ function preload() {
 
 function setup() {
     // first, create a leaflet map (look in the html's style tag to set its dimensions)
-    mymap = L.map('quake-map').setView([51.505, -0.09], 3);
+    mymap = L.map('quake-map').setView([39.0997, -94.5786], 4);
 
     // load a set of map tiles – choose from the different providers demoed here:
     // https://leaflet-extras.github.io/leaflet-providers/preview/
@@ -19,7 +19,7 @@ function setup() {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1IjoiZHZpYTIwMTciLCJhIjoiY2o5NmsxNXIxMDU3eTMxbnN4bW03M3RsZyJ9.VN5cq0zpf-oep1n1OjRSEA'
+        accessToken: 'pk.eyJ1IjoibWljaGFlbHNkZXNhaSIsImEiOiJjazM3dzhoZXAwM2E2M2JvYW9jM2pieHl2In0._rdrVCdsrNNjfSuQkk_r4w'
     }).addTo(mymap);
 
     // step through the rows of the table and add a dot for each event
@@ -36,7 +36,7 @@ function setup() {
             color: 'red',      // the dot stroke color
             fillColor: '#f03', // the dot fill color
             fillOpacity: 0.25,  // use some transparency so we can see overlaps
-            radius: row.getNum('mag') * 10000
+            radius: row.getNum('mag') * 1000000
         })
 
         // place the new dot on the map

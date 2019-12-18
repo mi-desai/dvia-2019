@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="libraries/leaflet/leaflet.css" />
+  <title>Proximity Alert</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="libraries/chart.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/BrowserFS/2.0.0/browserfs.min.js"></script>
+  <script type="text/javascript">
+     BrowserFS.install(window);
+  // Configures BrowserFS to use the LocalStorage file system.
+  BrowserFS.configure({
+    fs: "LocalStorage"
+  }, function(e) {
+    if (e) {
+      // An error happened!
+      throw e;
+    }
+    // Otherwise, BrowserFS is ready-to-use!
+  });
+  </script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="libraries/code-snippet.min.js"></script>
+  <script src="libraries/raphael.min.js"></script>
+  <script src="libraries/chart.min.js"></script>
+  <script src="libraries/leaflet/leaflet.js"></script>
+  <script src="libraries/lodash.min.js"></script>
+  <script src="libraries/d3-geo.min.js"></script>
+  <script src="final.js"></script>
+
+  <!-- default styles -->
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    
+    #container {
+      z-index: 999;
+    }
+
+    #quake-map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<div id="container">
+<body>
+  <select class="dropdown" name="year">
+  <option value="2018">2018</option>
+  <option value="2012">2012</option>
+
+  
+  <div id="quake-map"></div>
+</div>
+</body>
+
+</html>

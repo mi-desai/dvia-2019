@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="libraries/leaflet/leaflet.css" /> <!-- default styles -->
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* default dimensions for the leaflet map */
+    #quake-map{
+      width: 875px;
+      height: 525px;
+      border-radius: 25px;
+      border: 6px solid black;
+      padding: 20px;
+    }
+    
+    .container{
+      display: flex;
+      flex-direction: row;
+    }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proximity Alert</h1>
+    <h3>An Investigation of Earthquake Proximity to Unconventional Oil and Gas Plays in the Lower 48</h3>
+  </header>
+  <div class="container">
+  <input type="range" class="slider" min="2008" max="2019" id="yearslider">
+
+    </div>
+    <div id="quake-map"></div>
+  </div>
+
+  <!-- load our dependencies and sketch file -->
+  <script src="libraries/leaflet/leaflet.js"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/lodash.min.js"></script>
+  <script src="libraries/brewer.js"></script>
+  <script src="sketch.js"></script>
+
+  <!-- p5.js will create a canvas element here at runtime -->
+</body>
+</html>
