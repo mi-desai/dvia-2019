@@ -1,3 +1,6 @@
+![](https://github.com/mi-desai/dvia-2019/blob/master/3.mapping-space/process/final/prox-alert.PNG)
+
+
 ### Documentation for Stones Unturned Project
 
 The idea behind this project was to map earthquakes within shale oil and gas basins in the continental US. The chart below the map would show the proportion of earthquakes within a PARTICULAR basin over the course of a year, compared with the total production from that basin in terms of oil or gas (whichever commodity it primarily produces). 
